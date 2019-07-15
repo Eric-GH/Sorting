@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Author: HAO LI
@@ -17,6 +16,7 @@ import java.util.Objects;
  */
 
 public class BucketSort {
+
     void bucketSort(int[] input){
         final int[] code = hash(input);
         List[] buckets = new List[code[1]];

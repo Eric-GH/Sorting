@@ -16,7 +16,7 @@ public class HeapSort {
      * The main sort algorithm
      * @param array original array
      */
-    public void sort(int[] array)
+    public void heapSort(int[] array)
     {
         int n = array.length;
         for (int i = n / 2 - 1; i >= 0; i--)

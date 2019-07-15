@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Author: HAO LI
  *
@@ -9,40 +11,29 @@
  */
 
 public class CountingSort {
-
-    void sort(int[] array)
+    static void countSort(int[] array)
     {
-        int n = array.length;
-
-        // The output character array that will have sorted array
-        int[] output = new int[n];
-
-        // Create a count array to store count of inidividul
-        // characters and initialize count array as 0
-        int[] count = new int[256];
-        for (int i=0; i<256; ++i)
-            count[i] = 0;
-
-        // store count of each character
-        for (int i=0; i<n; ++i)
-            ++count[array[i]];
-
-        // Change count[i] so that count[i] now contains actual
-        // position of this character in output array
-        for (int i=1; i<=255; ++i)
-            count[i] += count[i-1];
-
-        // Build the output character array
-        // To make it stable we are operating in reverse order.
-        for (int i = n-1; i>=0; i--)
+        int max = Arrays.stream(array).max().getAsInt();
+        int min = Arrays.stream(array).min().getAsInt();
+        int range = max - min + 1;
+        int[] count = new int[range];
+        int[] output = new int[array.length];
+        for (int i = 0; i < array.length; i++)
         {
-            output[count[array[i]]-1] = array[i];
-            --count[array[i]];
+            count[array[i] - min]++;
         }
 
-        // Copy the output array to array, so that array now
-        // contains sorted characters
-        for (int i = 0; i<n; ++i)
-            array[i] = output[i];
+        for (int i = 1; i < count.length; i++)
+        {
+            count[i] += count[i - 1];
+        }
+
+        for (int i = array.length - 1; i >= 0; i--)
+        {
+            output[count[array[i] - min] - 1] = array[i];
+            count[array[i] - min]--;
+        }
+
+        System.arraycopy(output, 0, array, 0, array.length);
     }
 }

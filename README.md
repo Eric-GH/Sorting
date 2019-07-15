@@ -22,13 +22,24 @@ This is my practice for ten basic sorting algorithms
 
 | Name| Time Complexity(Average) | Space Complexity | Stability|
 | :-------: | :-----------: |:-------:|:--------:|
-| Bubble Sort   |  O(n^2^)	  | O(1)	  |Stable
+| Bubble Sort   |  O(n^2)	  | O(1)	  |Stable
 | Bucket Sort   |  O(n+k) 	  |O(n+k)	  |Stable
 | Counting Sort |  O(n+k) 	  |O(n+k)	  |Stable
 | Heap Sort     | O(nlog~2~n) | O(1)	  |Unstable
-| Insertion Sort| O(n^2^) 	  | O(1)	  |Stable
+| Insertion Sort| O(n^2) 	  | O(1)	  |Stable
 | Merge Sort    | O(nlog~2~n) | O(n)	  |Stable
 | Quick Sort    | O(nlog~2~n) |O(nlog~2~n)|Unstable
 | Radix Sort    | O(n*k)	  |O(n+k)	  |Stable
-| Select Sort   | O(n^2^)	  |O(1)		  |Unstable
-| Shell Sort    | O(n^1.3^)	  |O(1)		  |Unstable
+| Select Sort   | O(n^2)	  |O(1)		  |Unstable
+| Shell Sort    | O(n^1.3)	  |O(1)		  |Unstable
+
+## Example of Test
+</br>
+
+<img style="border-radius: 0.5125em;  
+box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"  
+src="https://github.com/Eric-GH/Sorting/blob/master/ScreenShot.png?raw=true">    
+<p align="center">
+	Test Result
+</p> 
+<br>
